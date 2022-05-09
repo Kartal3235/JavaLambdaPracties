@@ -124,9 +124,16 @@ public class C1_IntList_StreamOrnekleri {
 
 
     // S11 : peek ornegi cozelim - negatiflerin karelerinden list olusturalim
+    // göz ucuyla dikizlemek
     public static void negatfKareList(List<Integer> list) {
+        System.out.println(list.stream().
+                filter(t -> t < 0).
+                peek(t -> System.out.print("negatifler: " + t)).
+                map(t -> t * t).
+                peek(t-> System.out.println("kareleri: "+t)).
+                collect(Collectors.toList()));
 
-
+    // denetlemek istediğimiz sonrasına ekliyoruz
     }
 
 
@@ -140,16 +147,15 @@ public class C1_IntList_StreamOrnekleri {
 
     public static boolean list5BykVar(List<Integer> list) {
 
-        boolean kontrol = list.stream().anyMatch(t -> t > 5);
+       return list.stream().anyMatch(t -> t > 5);
 
-        return kontrol;
     }
 
 
     // S13 : listenin tum elemanlari sifirdan kucuk mu?
     public static void listElSıfKckMu(List<Integer> list) {
 
-        System.out.println(list.stream().allMatch(t -> t < 0) ? "Tüm elemanlar 0 dan küçüktür" : " 0 dan büyük eleman vardır.");
+        System.out.println(list.stream().allMatch(t -> t < 0) ? "Tüm elemanlar 0 dan küçüktür" : " 0 dan büyük elemanda vardır.");
 
     }
 

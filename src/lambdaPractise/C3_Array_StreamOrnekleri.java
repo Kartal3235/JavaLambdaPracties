@@ -1,4 +1,4 @@
-package lambda_practice;
+package lambdaPractise;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,7 +46,7 @@ public static void arrayElTopl(List<Integer>yenilist){
 
     public static void arrayElOrtYazdır(List<Integer>yenilist){
 
-        yenilist.stream().reduce(Integer::sum).map(Math::
+
     }
 
 
