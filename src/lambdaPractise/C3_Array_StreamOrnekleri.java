@@ -26,26 +26,29 @@ public class C3_Array_StreamOrnekleri {
        yenilist.add(9);
        yenilist.add(3);
        yenilist.add(4);
-        arrayElListYazdır(yenilist);
+        System.out.println(listele(arr1));
         System.out.println("\n******");
-        arrayElTopl(yenilist);
+
+        System.out.println("\n******");
+        ortalama(arr1);
+
     }
     //S1: arrayin elemanlarini bir liste yazdiralim
 
-    public static void arrayElListYazdır(List<Integer>yenilist) {
-        System.out.println(yenilist.stream().collect(Collectors.toList()));
+    public static List<Integer> listele(Integer[]arr){
+        return Arrays.stream(arr).collect(Collectors.toList());
     }
     //S2: Arrayin elemanlarini toplamini bulalim
 
-public static void arrayElTopl(List<Integer>yenilist){
 
-    System.out.println(yenilist.stream().reduce(Integer::sum));
-}
 
     // S3: Array in elemanlarinin ortalamasini bulalim yazdir
 
-    public static void arrayElOrtYazdır(List<Integer>yenilist){
-
+    public static void ortalama(Integer[] arr){
+        System.out.println(Arrays.
+                stream(arr).
+                mapToDouble(t -> t).
+                average());
 
     }
 
