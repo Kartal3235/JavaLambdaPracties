@@ -1,14 +1,16 @@
-package lambda_practice;
+package lambdaPractise;
 
 import java.util.stream.IntStream;
 
 public class Methods {
 
     public static void yazInteger(int n){
+
         System.out.print(n+" ");
     }
 
     public static void yazString(String s){
+
         System.out.print(s+" ");
     }
 
