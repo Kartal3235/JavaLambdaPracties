@@ -3,6 +3,7 @@ package lambdaPractise;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class C5_Method_Referance_String {
     public static void main(String[] args) {
@@ -16,8 +17,13 @@ public class C5_Method_Referance_String {
     }
     // S1: Tum harfleri buyuk harf ile aralarinda bosluk birakarak yazdiralim
     public static void tumHarfBykHrfArBosPrint(List<String> l){
-        l.stream().map(t->t.toUpperCase()).forEach(t->System.out.print(t+" "));
 
+        //l.stream().map(String::toUpperCase).forEach(t->System.out.print(t+" "));
+        System.out.println(l.stream().
+                map(String::toUpperCase).
+                map(t -> t.split("")).
+                flatMap(Arrays::stream).
+                collect(Collectors.toList()));
     }
 
     //S2: Stringleri uzunluklarina gore siralayip yaziniz
@@ -25,6 +31,9 @@ public class C5_Method_Referance_String {
     public static void stringUzunGöreSıralaPrint(List<String> l){
 
         l.stream().map(t->t.length()).sorted().forEach(t->System.out.print(t+" "));
+        //l.stream().
+        //        sorted(Comparator.comparing(String::length)).
+        //        forEach(Methods::yazString);
     }
 
     //S3: E ILE Baslayanlari yazdiralim

@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public class C4_Method_Refarance_Int {
     public static void main(String[] args) {
-        List<Integer> intL= Arrays.asList(-2,-8,-5,0,2,5,6,7,15,6,8);
+        List<Integer> intL= Arrays.asList(-2,-8,-5,2,0,5,6,7,15,6,8);
 
         tekleriBoşlkBrkYazdır( intL);
         System.out.println("\n****");
@@ -41,7 +41,9 @@ public class C4_Method_Refarance_Int {
 
     public static void negatifKareToplamı(List<Integer> intL){
 
-        System.out.println(intL.stream().filter(t -> t < 0).map(t -> t * t).reduce(Integer::sum));
+        //System.out.println(intL.stream().filter(t -> t < 0).map(t -> t * t).reduce(Integer::sum));
+
+        System.out.println(intL.stream().filter(t -> t<0).reduce(0, (u, t) -> (t*t)+ u));
     }
 
 
@@ -49,7 +51,7 @@ public class C4_Method_Refarance_Int {
 
     public static void poztfKupMaxPrint(List<Integer> intL){
 
-        System.out.println(intL.stream().filter(t -> t > 0).map(t -> t * t * t).reduce(Math::max));
+        System.out.println(intL.stream().filter(t -> t > 0).mapToInt(t->t*t*t).max());
     }
 
 
