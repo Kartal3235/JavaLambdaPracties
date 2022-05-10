@@ -1,11 +1,11 @@
 package lambdaPractise;
 
-// lambda da method kullanimi :
-//ilk olarak class adi yazilir
-//sonra  :: noktalar konur
-//son olarak method secilir
-//String class i sayesinde length gibi touppercase gibi methodlari kullanabiliriz
-//Math classi sayesinde de sum vb methodlar kullanabiliriz
+    // lambda da method kullanimi :
+    //ilk olarak class adi yazilir
+    //sonra  :: noktalar konur
+    //son olarak method secilir
+    //String class i sayesinde length gibi touppercase gibi methodlari kullanabiliriz
+    //Math classi sayesinde de sum vb methodlar kullanabiliriz
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,7 +34,9 @@ public class C4_Method_Refarance_Int {
     // S2: ciftlein carpimini bulalim
     public static void ciftCarpBulma(List<Integer> intL){
 
-        System.out.println(intL.stream().filter(t -> t % 2 == 0).reduce(Math::multiplyExact));
+        System.out.println(intL.stream().filter(Methods::ciftMi).reduce(Math::multiplyExact));
+
+        // multiplyExact Math classından gelir,yan yana sayıları çarpar.
     }
 
     // S3: negatiflerin kare toplamlarini  bulalim

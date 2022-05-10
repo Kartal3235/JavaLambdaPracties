@@ -22,7 +22,7 @@ public class C5_Method_Referance_String {
         System.out.println(l.stream().
                 map(String::toUpperCase).
                 map(t -> t.split("")).
-                flatMap(Arrays::stream).
+                flatMap(Arrays::stream).//
                 collect(Collectors.toList()));
     }
 

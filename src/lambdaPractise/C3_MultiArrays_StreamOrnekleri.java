@@ -1,10 +1,11 @@
 package lambdaPractise;
-//multi arrayleri cevirirken flapMap kullaniriz yapilis sekli iki turludur
-//1) lamda kullanarak
-// Arrays.stream(arr).flatMap(t->Arrays.stream(t))
-//2) method ile
-// Arrays.stream(arr).flatMap(Arrays::stream)
-// BU SEKLIDE ARTIK TUM STREAM METHODLARI KULLANILABILIR
+
+         //multi arrayleri cevirirken flapMap kullaniriz yapilis sekli iki turludur
+         //1) lamda kullanarak
+         // Arrays.stream(arr).flatMap(t->Arrays.stream(t))
+         //2) method ile
+         // Arrays.stream(arr).flatMap(Arrays::stream)
+         // BU SEKLIDE ARTIK TUM STREAM METHODLARI KULLANILABILIR
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -43,7 +44,11 @@ public class C3_MultiArrays_StreamOrnekleri {
     // S3: E ile baslayan elemanlari liste olarak yazdiralim
     public static void eİleBaslynElDoubListYazdır(String [][]arr){
 
-        System.out.println(Arrays.stream(arr).flatMap(Arrays::stream).filter(t -> t.startsWith("E")).map(t -> t + t).collect(Collectors.toList()));
+        System.out.println(Arrays.stream(arr).
+                flatMap(Arrays::stream).
+                filter(t -> t.startsWith("E")).
+                map(t -> t + t).
+                collect(Collectors.toList()));
     }
 
 

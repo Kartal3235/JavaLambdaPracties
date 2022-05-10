@@ -1,4 +1,4 @@
-package lambda_practice;
+package lambdaPractise;
 
 public class C0_Lambda_Aciklamalar {
          /*
@@ -85,6 +85,7 @@ public class C0_Lambda_Aciklamalar {
     Count
     Stream içerisinde bulunan toplam veri sayısını öğrenmemize yarar.
 
+    ***ÇİFT BOYUTLU ARRAYLAERDE flatMap Kullanılır.****
 
     flatMap() => Herhangi bir Collection’daki (Array gibi) elemanları birer birer Stream’e yerleştirir.
     flatMap()’i kullanabilmek için elimizde bir Collection olmak zorunda.
